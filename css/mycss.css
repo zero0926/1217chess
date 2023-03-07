@@ -8,3 +8,30 @@
     padding-top: 40pt;
 
 }
+
+  .dynamic-text{
+      position: relative;
+  height: 50px;
+      margin-left: 10px;
+      white-space: nowrap;
+      font-weight: bold;
+      color: #EDDE5D;
+&:before{
+     content: '';
+     position: absolute;
+     border-left: solid 1px  #EDDE5D;
+ //border-left 用來做會閃爍的打字線
+ width: 100%;
+     height: 100%;
+     bottom: 0;
+     left:0;
+     background: black; //偽元素就是一塊黑黑的傢伙把其他字遮起來～
+ animation: typewriter 4s steps(23) infinite,
+ blink 0.5s steps(23) infinite,
+ //animation一次可以放很多個
+ //animation的step就是將想要的效果拆解成幾步驟的意思
+ //這邊以最長的文字長度23拆解出來～
+ //typewriter 效果就是一直讓黑黑的遮布往右邊移動
+ //blink 效果就是讓打字的線|一直閃爍
+
+ }
