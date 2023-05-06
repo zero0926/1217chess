@@ -9,7 +9,7 @@
 
 }
 
-//處理-1：容器和靜態文字的部分
+/處理-1：容器和靜態文字的部分
   .container{
       display: flex;
       height: 50px; //
@@ -22,14 +22,14 @@
     white-space: nowrap;//文字讓他不要換行
 }
 
-//處理-2：打字效果
+/處理-2：打字效果
   .dynamic-text{
       position: relative; //相對於偽元素而言
   height: 50px;
       margin-left: 10px;
       white-space: nowrap;
       font-weight: bold;
-      color: #EDDE5D;
+      color: #EDDE5D;}
 
 &:before{
      content: '';
