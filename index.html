@@ -33,6 +33,9 @@
     </head>
     <body id="page-top">
         <!-- Navigation-->
+        <div id="preloader">
+            <div id="status"><img src="Loading.gif"/></div>
+        </div>
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="#page-top">回到頂端</a>
@@ -213,6 +216,10 @@
                     <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
                 </div>
             </div>
+            $(window).load(function() { // 確認整個頁面讀取完畢再將這三個div隱藏起來
+            $("#status").delay(5000).fadeOut(3000); //delay --> 延遲幾秒才fadeOut
+            $("#preloader").delay(7000).fadeOut(3000);
+            })
         </section>
         <!-- Footer-->
         <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Your Website 2022</div></footer>
@@ -225,5 +232,7 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <!-- jQuery Plugin -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
     </body>
 </html>
